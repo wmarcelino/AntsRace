@@ -1,0 +1,10 @@
+overwrite: true
+schema: 'https://sg-ants-test.herokuapp.com/graphql'
+documents:
+  - 'src/screens/Home/graphql/*.graphql'
+generates:
+  src/integration/Apollo/types/ants.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
