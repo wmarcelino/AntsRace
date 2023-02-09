@@ -30,9 +30,6 @@ export const ViewModel = () => {
   const handleStartRace = useCallback(() => {
     Promise.all(calculators)
       .then(results => {
-        console.log('results aqui ' + JSON.stringify(results));
-        console.log('antsFormatted aqui ' + JSON.stringify(antsFormatted));
-
         const localAnts: TAnt[] = antsFormatted.map(ant => {
           const antOdd = results.find(item => item.ant.name === ant.name);
 
@@ -42,10 +39,7 @@ export const ViewModel = () => {
           };
         });
 
-        console.log('localAnts' + JSON.stringify(localAnts));
         const antsSorted = localAnts.sort(compareAnts);
-
-        console.log('antsSorted' + JSON.stringify(localAnts));
 
         setAntsFormatted(antsSorted);
       })
@@ -53,10 +47,6 @@ export const ViewModel = () => {
         console.error(error);
       });
   }, [antsFormatted, calculators]);
-
-  //   const a = generateAntWinLikelihoodCalculator();
-
-  //   a(success => console.log(success));
 
   // If there is any change in the contract by the Backend, here is FOR NOW a good place to deal with it,
   // so there is no reason to change the view contract.
