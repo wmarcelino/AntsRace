@@ -36,7 +36,7 @@ cd ios
 ```
 
 ```console
-pod install ios
+pod install
 ```
 
 ```console
