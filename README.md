@@ -1,20 +1,52 @@
-# AntsRace
+# AntsRace Project Readme
 
-To start the project: 
+This document explains how to run the AntsRace project on your local machine. 
 
-Run yarn
 
-iOS only:
+## Getting Started
 
-cd ios;
-pod install
-cd ..
+1. Clone the AntsRace project repository to your local machine:
+
+```console
+git clone https://github.com/wmarcelino/AntsRace/
+```
+
+
+2. Navigate to the cloned repository:
+
+```console
+cd AntsRace
+```
+
+3. Install the required dependencies:
+
+```console
+yarn install
+```
+
+
+## Running the Project
+
+To run the AntsRace project, execute the following command:
+
+- To run on iOS:
+```console
 yarn ios
+```
 
-Android only:
 
+- To run on Android:
+```console
 yarn android
+```
 
 
-To update the graphql code gen: 
+
+## Updating Apollo Types
+Using Apollo codegen automatically generates strongly typed types for your GraphQL queries, mutations, and subscriptions, which helps prevent typing errors and increases code reliability. The types are already generated but you can update it by using the command:
+
+
+- To run on iOS:
+```console
 yarn update-apollo-types
+```
