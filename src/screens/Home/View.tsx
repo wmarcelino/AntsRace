@@ -45,6 +45,16 @@ export const View = ({
         <AntNameText>{item.name}</AntNameText>
 
         <AntRow>
+          <Text>Length</Text>
+          <Text>{item.length}</Text>
+        </AntRow>
+
+        <AntRow>
+          <Text>Weight</Text>
+          <Text>{item.weight}</Text>
+        </AntRow>
+
+        <AntRow>
           <Text>Status</Text>
           <Text>{GetRaceStatus[item.oddStatus]}</Text>
           {item.oddStatus === 'in_progress' && <ActivityIndicator />}
