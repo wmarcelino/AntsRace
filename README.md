@@ -30,6 +30,19 @@ yarn install
 To run the AntsRace project, execute the following command:
 
 - To run on iOS:
+
+```console
+cd ios
+```
+
+```console
+pod install ios
+```
+
+```console
+cd ..
+```
+
 ```console
 yarn ios
 ```
